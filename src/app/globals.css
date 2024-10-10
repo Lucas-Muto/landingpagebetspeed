@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --input-background: #2d2d2d; /* Adiciona cor para o input no modo escuro */
+  --button-background: #e5c680; /* Cor para o botão */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000; /* Cor de fundo */
+    --foreground: #ededed;
+    --input-background: #1a1a1a; /* Ajuste para o input */
+  }
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  background: var(--background); /* Adiciona cor de fundo */
+  color: var(--foreground); /* Define a cor de texto */
+  /* Corrigido: Definir Poppins como a fonte padrão */
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Container principal do layout */
+.container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ocupa toda a tela */
+}
+
+/* Estilização personalizada para caixas */
+.card {
+  background-color: var(--input-background);
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+}
+
+/* Estilização para botões personalizados */
+.button-custom {
+  background-color: var(--button-background);
+  color: #000;
+  width: 150px;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-custom:hover {
+  background-color: #d4b25f;
+}
+
+/* Estilização para o input */
+.input-custom {
+  background-color: var(--input-background);
+  color: var(--foreground);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
