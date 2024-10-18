@@ -18,7 +18,7 @@ const config = {
     },
     extend: {
       screens: {
-        'below1367': { max: '1366px' }, // Define um breakpoint personalizado para menos de 1367px
+        'below1367': '1366px' , // Define um breakpoint personalizado para menos de 1367px
         'custom-sm': '532px', // Definindo um novo breakpoint para 532px
         
       },
