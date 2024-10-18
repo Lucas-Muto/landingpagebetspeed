@@ -168,7 +168,7 @@ export default function LandingPage() {
           O <span className="text-[#E5C680]">maior clube de vantagens</span> do mundo das apostas chegou para você
         </p>
         <p className="text-white text-[20px] leading-[26px] font-normal text-left mt-4">
-          Receba cash-back mensal, tenha um assistente à sua disposição e viva experiências exclusivas que só um jogador Raio merece ter.
+          Receba cashback mensal, tenha um assistente à sua disposição e viva experiências exclusivas que só um jogador Raio merece ter.
         </p>
         {/* Contêiner para o botão e a imagem lado a lado */}
         <div className="mt-6 flex flex-row items-center space-x-4">
