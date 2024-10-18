@@ -9,7 +9,7 @@ import betspeed from '@/components/imagens/logo.svg';
 import cartao from '@/components/imagens/betspeed1.svg';
 import parabens from '@/components/imagens/parabens.svg';
 import fundo from '@/components/imagens/fumaça.svg';
-import parabens2 from '@/components/imagens/parabens2.svg';
+
 
 export default function Login() {
   const [username, setUsername] = useState('');
@@ -49,7 +49,7 @@ export default function Login() {
       </div>
 
       {/* Container para a imagem cinza */}
-      <div className="relative z-10 flex justify-center xl:justify-start ml-[750px] mb-[90px]  hidden sm:flex">
+      <div className="relative z-10 flex justify-center xl:justify-start ml-[700px] mb-[90px]  hidden sm:flex">
             <Image
               src={cartao}
               alt="Imagem cinza"

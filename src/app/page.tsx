@@ -9,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     // Redirecionar para a página de login assim que a aplicação é carregada
     router.push('/login');
-  }, []);
+  }, [router]); // Adicione 'router' como dependência
 
   return null; // Não renderiza nada na página inicial, apenas redireciona
 }

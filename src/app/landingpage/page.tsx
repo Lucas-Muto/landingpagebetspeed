@@ -8,9 +8,6 @@ import Slider from 'react-slick';
 import fundo from '@/components/imagens/fumaça.svg';
 import betspeed from '@/components/imagens/logo.svg';
 import gray from '@/components/imagens/betspeed1.svg';
-import graylarge from '@/components/imagens/cinzalargo.svg';
-import gray3 from '@/components/imagens/cinzatres.svg';
-import gray4 from '@/components/imagens/cinzaquatro.svg';
 import acesso from '@/components/imagens/acesso.svg';
 import beneficio from '@/components/imagens/beneficio.svg';
 import box1 from '@/components/imagens/box1.svg'
@@ -19,7 +16,6 @@ import box3 from '@/components/imagens/box3.svg'
 import box4 from '@/components/imagens/box4.svg'
 import box5 from '@/components/imagens/box5.svg'
 import box6 from '@/components/imagens/box6.svg'
-import boxteste from '@/components/imagens/boxtestee.svg'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import descricao from '@/components/imagens/descricao.svg'
@@ -387,8 +383,6 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-
-
 
 
       {/* Rodapé */}
