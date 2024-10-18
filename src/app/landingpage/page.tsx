@@ -137,7 +137,7 @@ export default function LandingPage() {
       </div>
 
       {/* Container para a imagem cinza */}
-      <div className="relative z-10 flex justify-center xl:justify-start ml-[900px] mt-[150px] hidden sm:flex">
+      <div className="relative z-10 justify-center xl:justify-start ml-[900px] mt-[150px] hidden sm:flex">
         <Image
           src={gray}
           alt="Imagem cinza"
@@ -203,13 +203,9 @@ export default function LandingPage() {
         <div className="sm:hidden w-full">
           <Slider {...settings}>
             {images.map((imageSrc, index) => (
-              <div
-                key={index}
-                className="flex justify-center"
-              >
+              <div key={index} className="flex justify-center">
                 <div
-                  className="w-[500px] h-[263px] rounded-[10px] flex flex-col items-center
-                     bg-[#000000] bg-opacity-[38%]"
+                  className="w-[500px] h-[263px] rounded-[10px] flex flex-col items-center bg-[#000000] bg-opacity-[38%]"
                 >
                   <Image
                     src={imageSrc}

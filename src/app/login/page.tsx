@@ -49,7 +49,7 @@ export default function Login() {
       </div>
 
       {/* Container para a imagem cinza */}
-      <div className="relative z-10 flex justify-center xl:justify-start ml-[700px] mb-[90px]  hidden sm:flex">
+      <div className="relative z-10 justify-center xl:justify-start ml-[700px] mb-[90px]  hidden sm:flex">
             <Image
               src={cartao}
               alt="Imagem cinza"
