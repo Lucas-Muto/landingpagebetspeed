@@ -92,7 +92,7 @@ export default function LandingPage() {
     autoplay: true, // Ativa o slide automático
     autoplaySpeed: 4000, // Define o intervalo de 2 segundos
     beforeChange: () => {
-      const slickTrack = document.querySelector('.slick-track');
+      const slickTrack = document.querySelector('.slick-track') as HTMLElement;
       if (slickTrack) {
         slickTrack.style.transform = 'translateX(-50px)'; // Ajuste o valor conforme necessário
       }

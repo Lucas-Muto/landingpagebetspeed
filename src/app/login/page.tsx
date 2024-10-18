@@ -30,7 +30,7 @@ export default function Login() {
   };
 
   // Função para detectar a tecla "ENTER" e chamar handleLogin
-  const handleKeyPress = (event) => {
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       handleLogin();
     }
