@@ -166,7 +166,7 @@ export default function Login() {
 
 
         {/* Container para centralizar o input e o botão */}
-        <div className="flex flex-col items-center mr-[690px] mt-[50px] smaller:translate-x-[333px] smaller:mt-[550px] max-w-full">
+        <div className="flex flex-col items-center mr-[690px] mt-[50px] smaller:translate-x-[345px] smaller:mt-[550px] max-w-full">
           {/* Campo de Input */}
           <div className="flex items-center border border-gray-300 rounded-[10px] bg-white px-3 py-2 mb-4 w-[458px] smaller:w-[340px] h-[64px]">
             {/* Ícone de usuário */}
