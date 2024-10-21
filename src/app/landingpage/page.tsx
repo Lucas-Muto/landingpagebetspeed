@@ -117,7 +117,7 @@ export default function LandingPage() {
   const images = [box1, box2, box3, box4, box5, box6];
 
   return (
-    <div className="relative w-full min-h-screen overflow-y-scroll overflow-x-hidden scrollbar-none">
+    <div className="relative w-full min-h-screen overflow-y-scroll overflow-x-hidden touch-auto scrollbar-none">
 
       {/* Plano de fundo como uma imagem */}
       <div className="fixed top-0 left-0 w-full h-full z-0">

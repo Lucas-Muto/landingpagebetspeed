@@ -44,17 +44,22 @@ export default function Login() {
       <style jsx global>{`
         @media (max-width: 430px) {
           body {
-            height: 932px;
-            overflow: hidden;
+            /* Removido height fixo e overflow hidden para permitir a rolagem */
+            height: auto;
+            overflow: auto;
           }
           #main-container {
-            height: 932px;
-            overflow: hidden;
+            /* Removido height fixo e overflow hidden para permitir a rolagem */
+            height: auto;
+            overflow: auto;
           }
         }
       `}</style>
 
-      <div id="main-container" className="flex h-screen min-h-screen overflow-hidden items-center justify-center bg-black font-poppins smaller:h-[932px] smaller:overflow-hidden">
+      <div
+        id="main-container"
+        className="flex min-h-screen overflow-auto items-center justify-center bg-black font-poppins touch-auto"
+      >
 
         {/* Plano de fundo como uma imagem */}
         <div className="fixed top-0 left-0 w-full h-full z-0">
