@@ -129,7 +129,7 @@ export default function LandingPage() {
       </div>
 
       {/* Ajusta a logo para centralizar em telas menores ou iguais a 430px */}
-      <div className="absolute top-[15px] left-[250px] p-4 z-10 smaller:relative smaller:flex smaller:justify-center smaller:top-0 smaller:left-0 smaller:w-full">
+      <div className="absolute top-[15px] left-[250px] p-4 z-10 smaller:relative smaller:translate-x-[-10px] smaller:flex smaller:justify-center smaller:top-0 smaller:left-0 smaller:w-full">
         <Image
           src={betspeed}
           alt="Logo betspeed"
@@ -151,7 +151,7 @@ export default function LandingPage() {
       </div>
 
       {/* Container para a imagem cinza - versão para telas pequenas */}
-      <div className="relative z-12 flex justify-center sm:hidden mt-[20px] mr-8">
+      <div className="relative z-12 flex justify-center sm:hidden mt-[20px] mr-[50px]">
         <Image
           src={gray}
           alt="Imagem cinza"
@@ -174,7 +174,7 @@ export default function LandingPage() {
 
 
         {/* Contêiner para o botão e a imagem lado a lado */}
-        <div className="mt-6 flex flex-row items-center space-x-4 smaller:flex-col smaller:items-center smaller:space-x-0 smaller:space-y-4 smaller:mt-[455px] smaller:translate-x-[-380px] smaller:w-full smaller:block">
+        <div className="mt-6 flex flex-row items-center space-x-4 smaller:translate-x-[-385px] smaller:flex-col smaller:items-center smaller:space-x-0 smaller:space-y-4 smaller:mt-[455px] smaller:translate-x-[-380px] smaller:w-full smaller:block">
           <div
             className="cursor-pointer transition-transform transform hover:scale-105 smaller:mx-auto"
             onClick={scrollToExperience}
@@ -198,7 +198,7 @@ export default function LandingPage() {
       </div>
 
       {/* Imagem para telas menores ou iguais a 430px */}
-      <div className="smaller:flex hidden justify-center items-start absolute top-[450px] smaller:pr-[15px] smaller:mt-[10px] left-0 w-full z-30">
+      <div className="smaller:flex hidden justify-center items-start absolute top-[450px] smaller:pr-[35px] smaller:mt-[10px] left-0 w-full z-30">
         <Image
           src={small}
           alt="Imagem para telas menores"
