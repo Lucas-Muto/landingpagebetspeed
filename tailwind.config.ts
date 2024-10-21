@@ -20,7 +20,9 @@ const config = {
       screens: {
         'below1367': '1366px', // Define um breakpoint personalizado para menos de 1367px
         'custom-sm': '532px',  // Definindo um novo breakpoint para 532px
-        'smaller': {'max': '430px'}, // Adiciona breakpoint para telas menores ou iguais a 430px
+        'smaller': {'max': '550px'},
+        'note': '1366px' // Adiciona breakpoint para telas menores ou iguais a 430px
+        
       },
       colors: {
         border: "hsl(var(--border))",

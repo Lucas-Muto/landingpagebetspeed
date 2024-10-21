@@ -96,19 +96,19 @@ export default function Login() {
   };
 
   return (
-    <div className="flex h-screen min-h-screen overflow-y-scroll overflow-x-hidden items-center justify-center bg-black font-poppins">
+    <div className="flex h-screen min-h-screen overflow-y-scroll overflow-x-hidden items-center justify-center bg-black font-poppins overflow">
 
       {/* Plano de fundo como uma imagem */}
-      <div className="fixed top-0 left-0 w-full h-full z-0">
+      <div className="fixed flex items-center justify-center top-0 left-0 w-full h-full z-0">
         <Image
           src={fundo}
           alt="Plano de fundo"
-          className="w-full h-full object-cover"
+          className="fixed object-cover w-screen h-screen"
         />
-      </div>
+      
 
       {/* Container para a imagem cinza */}
-      <div className="relative z-10 justify-center xl:justify-start ml-[700px] mb-[90px] sm:flex">
+      <div className="relative z-10 justify-center note:translate-x-[-50px] note:translate-y-[50px] xl:justify-start ml-[700px] mb-[90px] sm:flex">
         <Image
           src={cartao}
           alt="Imagem cinza"
@@ -119,7 +119,9 @@ export default function Login() {
       </div>
 
       {/* Posiciona a logo no canto superior esquerdo */}
-      <div className="absolute smaller:relative smaller:flex smaller:justify-center smaller:mt-[-800px] top-[15px] left-[250px] smaller:translate-x-[-260px] p-4 z-10">
+      <div className="absolute top-[15px] left-[450px] p-4 z-10 
+             note:left-[80px] 
+             smaller:left-0 smaller:relative smaller:flex smaller:justify-center smaller:mt-[-800px]">
         <Image
           src={betspeed}
           alt="Logo betspeed"
@@ -129,18 +131,18 @@ export default function Login() {
         />
       </div>
 
-      <div className="smaller:block hidden mr-[65px] mt-[-410px] absolute text-center z-20">
+      <div className="smaller:flex top-10 mr-4 absolute hidden justify-center text-center z-20">
         {/* Imagem "parabens" substituindo os textos */}
         <Image
           src={novo}
           alt="Parabéns"
           width={389} // Ajuste a largura conforme necessário
           height={253} // Ajuste a altura conforme necessário
-          className="mx-auto mb-6 max-w-full"
+          className="mx-auto max-w-full"
         />
       </div>
 
-      <div className="smaller:block hidden mr-[-5px] mt-[70px] absolute text-center z-20">
+      <div className="smaller:flex hidden mr-[-5px] mt-[70px] absolute text-center z-20">
         {/* Imagem "parabens" substituindo os textos */}
         <Image
           src={raio2}
@@ -152,14 +154,14 @@ export default function Login() {
       </div>
 
 
-      <div className="absolute text-center mb-[150px] ml- z-20">
+      <div className="absolute text-center note:translate-y-[120px] mb-[150px] ml- z-20">
         {/* Imagem "parabens" substituindo os textos */}
         <Image
           src={parabens}
           alt="Parabéns"
           width={537} // Ajuste a largura conforme necessário
           height={163} // Ajuste a altura conforme necessário
-          className="mx-auto mb-6 smaller:hidden mr-[655px] max-w-full"
+          className="mx-auto mb-6  smaller:hidden mr-[655px] max-w-full"
         />
 
 
@@ -191,6 +193,7 @@ export default function Login() {
             Acessar
           </button>
         </div>
+      </div>
       </div>
     </div>
   );

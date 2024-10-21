@@ -21,8 +21,6 @@
 }
 
 body, html {
-  padding: 0;
-  margin: 0;
   min-height: 100%;
   background: var(--background); /* Adiciona cor de fundo */
   color: var(--foreground); /* Define a cor de texto */
@@ -30,6 +28,11 @@ body, html {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
+
+.overflow{
+  overflow: hidden;
+}
+
 
 * {
   box-sizing: border-box;

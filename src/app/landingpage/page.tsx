@@ -18,17 +18,13 @@ import box5 from '@/components/imagens/box5.svg'
 import box6 from '@/components/imagens/box6.svg'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import descricao from '@/components/imagens/descricao.svg'
-import whisky from '@/components/imagens/whisky.svg'
-import botao2 from '@/components/imagens/botao2.svg'
-import contato from '@/components/imagens/contato.svg'
-import telegram from '@/components/imagens/telegram.svg'
-import botao3 from '@/components/imagens/botao3.svg'
 import setaDireita from '@/components/imagens/seta-direita.svg';
 import setaBaixo from '@/components/imagens/seta-baixo.svg';
 import small from '@/components/imagens/small.svg';
-import jornada from '@/components/imagens/jornada.svg';
-import palma from '@/components/imagens/palma.svg';
+import botaozao from '@/components/imagens/botaozao.svg';
+import botaozinho from '@/components/imagens/botaozinho.svg';
+import botaotelegram from '@/components/imagens/botaotelegram.svg';
+import botaofinal from '@/components/imagens/botaofinal.svg';
 
 export default function LandingPage() {
   const router = useRouter();
@@ -129,7 +125,7 @@ export default function LandingPage() {
       </div>
 
       {/* Ajusta a logo para centralizar em telas menores ou iguais a 430px */}
-      <div className="absolute top-[15px] left-[250px] p-4 z-10 smaller:relative smaller:translate-x-[-10px] smaller:flex smaller:justify-center smaller:top-0 smaller:left-0 smaller:w-full">
+      <div className="absolute note:translate-x-[-100px] top-[15px] left-[250px] p-4 z-10 smaller:relative smaller:translate-x-[-10px] smaller:flex smaller:justify-center smaller:top-0 smaller:left-0 smaller:w-full">
         <Image
           src={betspeed}
           alt="Logo betspeed"
@@ -140,7 +136,7 @@ export default function LandingPage() {
       </div>
 
       {/* Container para a imagem cinza */}
-      <div className="relative z-10 justify-center xl:justify-start ml-[900px] mt-[150px] hidden sm:flex">
+      <div className="relative note:translate-x-[-60px] note:translate-y-[40px] z-10 justify-center xl:justify-start ml-[900px] mt-[150px] hidden sm:flex">
         <Image
           src={gray}
           alt="Imagem cinza"
@@ -162,7 +158,7 @@ export default function LandingPage() {
       </div>
 
       {/* Container para o texto ao lado esquerdo da imagem cinza */}
-      <div className="absolute top-[300px] left-[330px] w-[537px] h-[377px] flex flex-col z-20">
+      <div className="absolute note:translate-x-[-100px] note:translate-y-[-20px] top-[300px] left-[330px] w-[537px] h-[377px] flex flex-col z-20">
         <div className="smaller:hidden">
           <p className="text-white text-[48px] font-extrabold leading-[53px] text-left">
             O <span className="text-[#E5C680]">maior clube de vantagens</span> do mundo das apostas chegou para você
@@ -238,13 +234,13 @@ export default function LandingPage() {
 
 
         {/* Layout original com duas fileiras para larguras acima de 639px */}
-        <div className="hidden sm:flex w-[1500px] flex-col items-center">
+        <div className="hidden  ml-[260px] sm:flex w-[1500px] flex-col items-center">
           {/* Primeira fileira de cards */}
           <div className="flex items-center w-full h-[263px]">
             {[box1, box2, box3].map((imageSrc, index) => (
               <React.Fragment key={index}>
                 <div
-                  className="w-[500px] h-[263px] rounded-[10px] flex flex-col items-center
+                  className="w-[400px] h-[263px] rounded-[10px] flex flex-col items-center
                        sm:bg-transparent bg-[#000000] bg-opacity-[38%]"
                 >
                   <Image
@@ -266,7 +262,7 @@ export default function LandingPage() {
             {[box4, box5, box6].map((imageSrc, index) => (
               <React.Fragment key={index}>
                 <div
-                  className="w-[500px] h-[263px] rounded-[10px] flex flex-col items-center
+                  className="w-[400px] h-[263px] rounded-[10px] flex flex-col items-center
                        sm:bg-transparent bg-[#000000] bg-opacity-[38%]"
                 >
                   <Image
@@ -285,116 +281,81 @@ export default function LandingPage() {
         </div>
       </div>
 
-      {/* Novo Container com duas imagens e um botão */}
-      <div className="relative flex flex-col sm:flex-row justify-center items-center mt-[220px]">
-        {/* Imagem "descricao" na esquerda - escondida em telas menores */}
-        <div className="flex-shrink-0 relative right-[-400px] smaller:hidden">
+      <div className="flex relative smaller:hidden justify-center items-center h-screen">
+        <a
+          href="https://wa.me/21991871253"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cursor-pointer"
+        >
           <Image
-            src={descricao}
-            alt="Imagem de descrição"
-            width={437}
-            height={182}
-            className="w-[437px] h-[182px]"
-          />
-        </div>
-
-        {/* Imagem "jornada" que será mostrada em telas menores */}
-        <div className="hidden smaller:flex justify-center w-full smaller:translate-y-[-160px]">
-          <Image
-            src={jornada}
-            alt="Imagem de jornada"
-            width={329}
-            height={182}
-            className="w-[329px] h-[182px]"
-          />
-        </div>
-
-        {/* Contêiner para a imagem "contato" e o "botao2" */}
-        <div className="mt-[100px] flex flex-col items-start sm:translate-y-[120px] smaller:items-center sm:translate-x-[-35px] w-full smaller:mt-[180px] relative z-10">
-          {/* Imagem "contato" centralizada */}
-          <Image
-            src={contato}
-            alt="Imagem de contato"
+            src={botaozao}
+            alt="Botão grande"
             width={441}
-            height={26}
-            className="w-[441px] h-[26px] smaller:w-[365px] smaller:mx-auto"
+            height={60}
+            className="w-[1200px] h-[1200px]"
           />
+        </a>
+      </div>
 
-          {/* Imagem "botao2" centralizada */}
-          <a
-            href="https://wa.me/21991871253"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-[5px] flex justify-center w-full smaller:mx-auto relative z-20"
-          >
-            <Image
-              src={botao2}
-              alt="Botão 2"
-              width={441}
-              height={60}
-              className="w-[441px] h-[60px] cursor-pointer smaller:w-[370px] transition-transform transform hover:scale-105"
-            />
-          </a>
-        </div>
-
-        {/* Imagem "whisky" centralizada para telas menores */}
-        <div className="flex-shrink-0 mt-8 sm:mt-0 relative left-[120px] sm:mr-[400px] smaller:mx-auto smaller:translate-x-[-110px] smaller:mt-[-360px]">
+      {/* Imagem "botaozinho" visível apenas em telas de 550px ou menores */}
+      <div className="hidden relative mt-[10px] smaller:flex justify-center items-center h-screen">
+        <a
+          href="https://wa.me/21991871253"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cursor-pointer"
+        >
           <Image
-            src={whisky}
-            alt="Imagem de whisky"
-            width={621}
-            height={346}
-            className="w-[621px] h-[346px] smaller:w-[300px] smaller:h-[200px] smaller:mx-auto"
+            src={botaozinho}
+            alt="Botão pequeno"
+            width={220}
+            height={30}
+            className="w-[500px] h-[600px]"
           />
-        </div>
+        </a>
+      </div>
+
+      <div className="flex relative mt-[-300px] smaller:hidden justify-center items-center h-screen">
+        <a
+          href="https://wa.me/21991871253"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cursor-pointer"
+        >
+          <Image
+            src={botaofinal}
+            alt="Botão grande"
+            width={441}
+            height={60}
+            className="w-[900px] h-[1200px]"
+          />
+        </a>
       </div>
 
 
-      {/* Novo Container com a imagem "telegram" e o botão "botao3" */}
-      <div className="relative mt-[-40px] sm:mt-[140px]">
-        {/* Botão "botao3" no canto superior direito, com efeito de hover */}
+      {/* Imagem "botaozinho" visível apenas em telas de 550px ou menores */}
+      <div className="hidden relative mt-[-110px] mb-[-50px] smaller:flex justify-center items-center h-screen">
         <a
-          href="https://t.me/+OjzvJqfzVR8yNjZh"
+          href="https://wa.me/21991871253"
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute top-[195px] right-[600px] transform transition-transform hover:scale-105 sm:translate-x-[125px] smaller:static smaller:mx-auto smaller:block smaller:translate-y-[490px] smaller:translate-x-[70px]"
+          className="cursor-pointer"
         >
           <Image
-            src={botao3}
-            alt="Botão 3"
-            width={261}
-            height={48}
-            className="w-[261px] h-[48px] sm:translate-x-[-125px] translate-y-[5px] top-2"
+            src={botaotelegram}
+            alt="Botão pequeno"
+            width={220}
+            height={30}
+            className="w-[350px] h-[400px]"
           />
         </a>
-
-        {/* Imagem "telegram" centralizada - escondida em telas menores */}
-        <div className="smaller:hidden">
-          <Image
-            src={telegram}
-            alt="Imagem do Telegram"
-            width={800}
-            height={400}
-            className="w-[800px] h-[400px] mx-auto"
-          />
-        </div>
-
-        {/* Imagem "palma" que será mostrada em telas menores */}
-        <div className="hidden smaller:flex justify-center mt-[250px]">
-          <Image
-            src={palma}
-            alt="Imagem de palma"
-            width={329}
-            height={267}
-            className="w-[329px] h-[267px]"
-          />
-        </div>
       </div>
 
       {/* FAQ Section */}
       <div className="relative w-full min-h-screen overflow-y-scroll overflow-x-hidden scrollbar-none">
         {/* FAQ Section */}
-        <div className="mt-[100px] text-center">
+        <div className="mt-[50px] text-center">
           <h2 className="text-[#E5C680] text-[44px] smaller:text-[34px] font-bold uppercase tracking-wide">FAQ</h2>
 
           <div className="mt-[50px] space-y-[10px]">
