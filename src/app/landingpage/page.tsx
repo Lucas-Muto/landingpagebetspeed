@@ -311,12 +311,12 @@ export default function LandingPage() {
             alt="Botão pequeno"
             width={220}
             height={30}
-            className="w-[500px] h-[600px]"
+            className="w-[350px] h-[600px]"
           />
         </a>
       </div>
 
-      <div className="flex relative mt-[-300px] smaller:hidden justify-center items-center h-screen">
+      <div className="flex relative mt-[-200px] smaller:hidden justify-center items-center h-screen">
         <a
           href="https://wa.me/21991871253"
           target="_blank"

@@ -131,7 +131,7 @@ export default function Login() {
         />
       </div>
 
-      <div className="smaller:flex top-10 mr-4 absolute hidden justify-center text-center z-20">
+      <div className="smaller:flex top-0 mr-4 absolute hidden justify-center text-center z-20">
         {/* Imagem "parabens" substituindo os textos */}
         <Image
           src={novo}
