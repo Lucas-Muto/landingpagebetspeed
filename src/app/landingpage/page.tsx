@@ -357,7 +357,7 @@ export default function LandingPage() {
           href="https://t.me/+OjzvJqfzVR8yNjZh"
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute top-[195px] right-[600px] transform transition-transform hover:scale-105 sm:translate-x-[125px] smaller:static smaller:mx-auto smaller:block smaller:translate-y-[490px] smaller:translate-x-[85px]"
+          className="absolute top-[195px] right-[600px] transform transition-transform hover:scale-105 sm:translate-x-[125px] smaller:static smaller:mx-auto smaller:block smaller:translate-y-[490px] smaller:translate-x-[70px]"
         >
           <Image
             src={botao3}

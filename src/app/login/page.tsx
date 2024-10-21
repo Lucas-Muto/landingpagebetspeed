@@ -85,7 +85,7 @@ export default function Login() {
       </div>
 
    
-      <div className="smaller:block hidden mr-[75px] mt-[-450px] absolute text-center z-20">
+      <div className="smaller:block hidden mr-[65px] mt-[-410px] absolute text-center z-20">
         {/* Imagem "parabens" substituindo os textos */}
         <Image
           src={novo}
@@ -96,7 +96,7 @@ export default function Login() {
         />
       </div>
 
-      <div className="smaller:block hidden mr-5 mt-[70px] absolute text-center z-20">
+      <div className="smaller:block hidden mr-[-5px] mt-[70px] absolute text-center z-20">
         {/* Imagem "parabens" substituindo os textos */}
         <Image
           src={raio2}
@@ -108,7 +108,7 @@ export default function Login() {
       </div>
 
 
-      <div className="absolute text-center mb-[150px] ml-3 z-20">
+      <div className="absolute text-center mb-[150px] ml-5 z-20">
         {/* Imagem "parabens" substituindo os textos */}
         <Image
           src={parabens}
