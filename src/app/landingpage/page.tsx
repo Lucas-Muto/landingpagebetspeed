@@ -26,6 +26,9 @@ import telegram from '@/components/imagens/telegram.svg'
 import botao3 from '@/components/imagens/botao3.svg'
 import setaDireita from '@/components/imagens/seta-direita.svg';
 import setaBaixo from '@/components/imagens/seta-baixo.svg';
+import small from '@/components/imagens/small.svg';
+import jornada from '@/components/imagens/jornada.svg';
+import palma from '@/components/imagens/palma.svg';
 
 export default function LandingPage() {
   const router = useRouter();
@@ -125,14 +128,14 @@ export default function LandingPage() {
         />
       </div>
 
-      {/* Posiciona a logo no canto superior esquerdo */}
-      <div className="absolute top-[15px] left-[250px] p-4 z-10">
+      {/* Ajusta a logo para centralizar em telas menores ou iguais a 430px */}
+      <div className="absolute top-[15px] left-[250px] p-4 z-10 smaller:relative smaller:flex smaller:justify-center smaller:top-0 smaller:left-0 smaller:w-full">
         <Image
           src={betspeed}
           alt="Logo betspeed"
           width={237} // Largura ajustada
           height={77} // Altura ajustada
-          className="w-[237px] h-[77px]"
+          className="w-[237px] h-[77px] smaller:w-auto"
         />
       </div>
 
@@ -148,11 +151,11 @@ export default function LandingPage() {
       </div>
 
       {/* Container para a imagem cinza - versão para telas pequenas */}
-      <div className="relative z-12 flex justify-center sm:hidden mt-[150px] mr-4">
+      <div className="relative z-12 flex justify-center sm:hidden mt-[20px] mr-8">
         <Image
           src={gray}
           alt="Imagem cinza"
-          width={310}
+          width={360}
           height={253}
           className="object-cover rounded-[15px]"
         />
@@ -160,24 +163,28 @@ export default function LandingPage() {
 
       {/* Container para o texto ao lado esquerdo da imagem cinza */}
       <div className="absolute top-[300px] left-[330px] w-[537px] h-[377px] flex flex-col z-20">
-        <p className="text-white text-[48px] font-extrabold leading-[53px] text-left">
-          O <span className="text-[#E5C680]">maior clube de vantagens</span> do mundo das apostas chegou para você
-        </p>
-        <p className="text-white text-[20px] leading-[26px] font-normal text-left mt-4">
-          Receba cashback mensal, tenha um assistente à sua disposição e viva experiências exclusivas que só um jogador Raio merece ter.
-        </p>
+        <div className="smaller:hidden">
+          <p className="text-white text-[48px] font-extrabold leading-[53px] text-left">
+            O <span className="text-[#E5C680]">maior clube de vantagens</span> do mundo das apostas chegou para você
+          </p>
+          <p className="text-white text-[20px] leading-[26px] font-normal text-left mt-4">
+            Receba cashback mensal, tenha um assistente à sua disposição e viva experiências exclusivas que só um jogador Raio merece ter.
+          </p>
+        </div>
+
+
         {/* Contêiner para o botão e a imagem lado a lado */}
-        <div className="mt-6 flex flex-row items-center space-x-4">
+        <div className="mt-6 flex flex-row items-center space-x-4 smaller:flex-col smaller:items-center smaller:space-x-0 smaller:space-y-4 smaller:mt-[455px] smaller:translate-x-[-380px] smaller:w-full smaller:block">
           <div
-            className="cursor-pointer transition-transform transform hover:scale-105"
-            onClick={scrollToExperience} // Adicionado o evento onClick na div
+            className="cursor-pointer transition-transform transform hover:scale-105 smaller:mx-auto"
+            onClick={scrollToExperience}
           >
             <Image
               src={acesso}
               alt="Botão de acesso"
               width={258}
               height={48}
-              className="w-[258px] h-[48px]"
+              className="w-[258px] h-[48px] smaller:w-[300px] smaller:h-[50px] smaller:mx-auto"
             />
           </div>
           <Image
@@ -185,14 +192,25 @@ export default function LandingPage() {
             alt="Imagem de benefício"
             width={202}
             height={44}
-            className="w-[202px] h-[44px] relative left-7"
+            className="w-[202px] h-[44px] relative left-7 smaller:left-0 smaller:w-[400px] smaller:h-[50px] smaller:translate-x-[80px] smaller:mt-[20px] smaller:mx-auto"
           />
         </div>
       </div>
 
+      {/* Imagem para telas menores ou iguais a 430px */}
+      <div className="smaller:flex hidden justify-center items-start absolute top-[450px] smaller:pr-[15px] smaller:mt-[10px] left-0 w-full z-30">
+        <Image
+          src={small}
+          alt="Imagem para telas menores"
+          width={440} // Largura ajustada
+          height={250} // Altura ajustada
+          className="w-[380px] h-[250px]" // Atualiza os valores das classes
+        />
+      </div>
+
       {/* Novo container para o texto centralizado */}
-      <div ref={experienceRef} className="absolute flex justify-center items-center w-full mt-[200px] font-bold z-20">
-        <p className="text-white text-[35px] leading-[40px] text-center">
+      <div ref={experienceRef} className="absolute flex justify-center items-center w-full mt-[200px] font-bold z-20 smaller:mt-[490px]">
+        <p className="text-white text-[35px] leading-[40px] text-center smaller:text-[25px]">
           A sua experiência BetSpeed <span className="text-[#E5C680]">potencializada</span>
         </p>
       </div>
@@ -200,12 +218,12 @@ export default function LandingPage() {
       {/* Seção dos cards abaixo da seção superior */}
       <div className="relative z-20 w-full flex flex-col items-center justify-center mt-[400px]">
         {/* Carrossel para larguras abaixo de 639px */}
-        <div className="sm:hidden w-full">
+        <div className="sm:hidden w-full mt-[50px] smaller:mt-[200px]">
           <Slider {...settings}>
             {images.map((imageSrc, index) => (
               <div key={index} className="flex justify-center">
                 <div
-                  className="w-[500px] h-[263px] rounded-[10px] flex flex-col items-center bg-[#000000] bg-opacity-[38%]"
+                  className="w-[500px] h-[263px] rounded-[16px] bg-black/10 flex flex-col items-center"
                 >
                   <Image
                     src={imageSrc}
@@ -269,8 +287,8 @@ export default function LandingPage() {
 
       {/* Novo Container com duas imagens e um botão */}
       <div className="relative flex flex-col sm:flex-row justify-center items-center mt-[220px]">
-        {/* Imagem "descricao" na esquerda */}
-        <div className="flex-shrink-0 relative right-[50px]">
+        {/* Imagem "descricao" na esquerda - escondida em telas menores */}
+        <div className="flex-shrink-0 relative right-[-400px] smaller:hidden">
           <Image
             src={descricao}
             alt="Imagem de descrição"
@@ -278,76 +296,106 @@ export default function LandingPage() {
             height={182}
             className="w-[437px] h-[182px]"
           />
-
-          {/* Contêiner abaixo da imagem "descricao" */}
-          <div className="mt-[100px] flex flex-col items-start">
-            {/* Imagem "contato" */}
-            <Image
-              src={contato}
-              alt="Imagem de contato"
-              width={441}
-              height={26}
-              className="w-[441px] h-[26px]"
-            />
-
-            {/* Imagem "botao2" que funciona como um botão, com espaço de 5px acima */}
-            <a href="https://wa.me/21991871253" target="_blank" rel="noopener noreferrer" className="mt-[5px]">
-              <Image
-                src={botao2}
-                alt="Botão 2"
-                width={441}
-                height={60}
-                className="w-[441px] h-[60px] cursor-pointer transition-transform transform hover:scale-105"
-              />
-            </a>
-          </div>
         </div>
 
-        {/* Imagem "whisky" na direita */}
-        <div className="flex-shrink-0 mt-8 sm:mt-0 relative left-[120px]">
+        {/* Imagem "jornada" que será mostrada em telas menores */}
+        <div className="hidden smaller:flex justify-center w-full smaller:translate-y-[-160px]">
+          <Image
+            src={jornada}
+            alt="Imagem de jornada"
+            width={329}
+            height={182}
+            className="w-[329px] h-[182px]"
+          />
+        </div>
+
+        {/* Contêiner para a imagem "contato" e o "botao2" */}
+        <div className="mt-[100px] flex flex-col items-start sm:translate-y-[120px] smaller:items-center sm:translate-x-[-35px] w-full smaller:mt-[180px] relative z-10">
+          {/* Imagem "contato" centralizada */}
+          <Image
+            src={contato}
+            alt="Imagem de contato"
+            width={441}
+            height={26}
+            className="w-[441px] h-[26px] smaller:w-[365px] smaller:mx-auto"
+          />
+
+          {/* Imagem "botao2" centralizada */}
+          <a
+            href="https://wa.me/21991871253"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-[5px] flex justify-center w-full smaller:mx-auto relative z-20"
+          >
+            <Image
+              src={botao2}
+              alt="Botão 2"
+              width={441}
+              height={60}
+              className="w-[441px] h-[60px] cursor-pointer smaller:w-[370px] transition-transform transform hover:scale-105"
+            />
+          </a>
+        </div>
+
+        {/* Imagem "whisky" centralizada para telas menores */}
+        <div className="flex-shrink-0 mt-8 sm:mt-0 relative left-[120px] sm:mr-[400px] smaller:mx-auto smaller:translate-x-[-110px] smaller:mt-[-360px]">
           <Image
             src={whisky}
             alt="Imagem de whisky"
             width={621}
             height={346}
-            className="w-[621px] h-[346px]"
+            className="w-[621px] h-[346px] smaller:w-[300px] smaller:h-[200px] smaller:mx-auto"
           />
         </div>
       </div>
 
+
       {/* Novo Container com a imagem "telegram" e o botão "botao3" */}
-      <div className="relative mt-[140px]">
+      <div className="relative mt-[-40px] sm:mt-[140px]">
         {/* Botão "botao3" no canto superior direito, com efeito de hover */}
         <a
           href="https://t.me/+OjzvJqfzVR8yNjZh"
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute top-[195px] right-[600px] transform transition-transform hover:scale-105"
+          className="absolute top-[195px] right-[600px] transform transition-transform hover:scale-105 sm:translate-x-[125px] smaller:static smaller:mx-auto smaller:block smaller:translate-y-[490px] smaller:translate-x-[85px]"
         >
           <Image
             src={botao3}
             alt="Botão 3"
-            width={261} // Ajustando para o tamanho desejado
+            width={261}
             height={48}
-            className="w-[261px] h-[48px] top-2" // Ajuste das dimensões no Tailwind
+            className="w-[261px] h-[48px] sm:translate-x-[-125px] translate-y-[5px] top-2"
           />
         </a>
 
-        {/* Imagem "telegram" centralizada */}
-        <Image
-          src={telegram}
-          alt="Imagem do Telegram"
-          width={800} // Defina a largura e altura conforme necessário
-          height={400}
-          className="w-[800px] h-[400px] mx-auto"
-        />
+        {/* Imagem "telegram" centralizada - escondida em telas menores */}
+        <div className="smaller:hidden">
+          <Image
+            src={telegram}
+            alt="Imagem do Telegram"
+            width={800}
+            height={400}
+            className="w-[800px] h-[400px] mx-auto"
+          />
+        </div>
+
+        {/* Imagem "palma" que será mostrada em telas menores */}
+        <div className="hidden smaller:flex justify-center mt-[250px]">
+          <Image
+            src={palma}
+            alt="Imagem de palma"
+            width={329}
+            height={267}
+            className="w-[329px] h-[267px]"
+          />
+        </div>
       </div>
 
       {/* FAQ Section */}
       <div className="relative w-full min-h-screen overflow-y-scroll overflow-x-hidden scrollbar-none">
         {/* FAQ Section */}
         <div className="mt-[100px] text-center">
-          <h2 className="text-[#E5C680] text-[44px] font-bold uppercase tracking-wide">FAQ</h2>
+          <h2 className="text-[#E5C680] text-[44px] smaller:text-[34px] font-bold uppercase tracking-wide">FAQ</h2>
 
           <div className="mt-[50px] space-y-[10px]">
             {faqs.map((faq, index) => (
@@ -355,9 +403,9 @@ export default function LandingPage() {
                 {/* Pergunta */}
                 <div
                   onClick={() => toggleFAQ(index)}
-                  className="flex justify-between items-center w-[768px] cursor-pointer"
+                  className="flex justify-between items-center w-[768px] smaller:w-[390px] cursor-pointer"
                 >
-                  <p className="text-[#E5C680] text-[20px] font-semibold">{faq.question}</p>
+                  <p className="text-[#E5C680] text-[20px] smaller:text-[13px] font-semibold">{faq.question}</p>
                   <Image
                     src={activeIndex === index ? setaBaixo : setaDireita}
                     alt="Seta"
@@ -368,11 +416,11 @@ export default function LandingPage() {
                 </div>
 
                 {/* Linha separadora */}
-                <hr className="w-[768px] h-[1px] bg-[#E5C680] my-5" />
+                <hr className="w-[768px] smaller:w-[390px] h-[1px] bg-[#E5C680] my-5" />
 
                 {/* Resposta */}
                 {activeIndex === index && (
-                  <p className="text-[#FFFFFF] w-[768px] text-left ">{faq.answer}</p>
+                  <p className="text-[#FFFFFF] w-[768px] smaller:w-[390px] text-left ">{faq.answer}</p>
                 )}
               </div>
             ))}
