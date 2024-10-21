@@ -18,7 +18,6 @@ export default function Login() {
   const router = useRouter();
 
   const allowedUsers = [
-    'Lucas', 'Maria', 'Joao',
     'mauricio mendes santos',
     'henrique de souza barcelos',
     'mingpei wu',
