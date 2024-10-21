@@ -28,6 +28,7 @@ body, html {
   color: var(--foreground); /* Define a cor de texto */
   /* Corrigido: Definir Poppins como a fonte padrão */
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 * {
