@@ -174,7 +174,7 @@ export default function LandingPage() {
 
 
         {/* Contêiner para o botão e a imagem lado a lado */}
-        <div className="mt-6 flex flex-row items-center space-x-4 smaller:translate-x-[-385px] smaller:flex-col smaller:items-center smaller:space-x-0 smaller:space-y-4 smaller:mt-[455px] smaller:translate-x-[-380px] smaller:w-full smaller:block">
+        <div className="mt-6 flex flex-row items-center space-x-4 smaller:translate-x-[-390px] smaller:flex-col smaller:items-center smaller:space-x-0 smaller:space-y-4 smaller:mt-[455px] smaller:translate-x-[-380px] smaller:w-full smaller:block">
           <div
             className="cursor-pointer transition-transform transform hover:scale-105 smaller:mx-auto"
             onClick={scrollToExperience}
@@ -198,7 +198,7 @@ export default function LandingPage() {
       </div>
 
       {/* Imagem para telas menores ou iguais a 430px */}
-      <div className="smaller:flex hidden justify-center items-start absolute top-[450px] smaller:pr-[35px] smaller:mt-[10px] left-0 w-full z-30">
+      <div className="smaller:flex hidden justify-center items-start absolute top-[450px] smaller:pr-[25px] smaller:mt-[10px] left-0 w-full z-30">
         <Image
           src={small}
           alt="Imagem para telas menores"
@@ -403,7 +403,7 @@ export default function LandingPage() {
                 {/* Pergunta */}
                 <div
                   onClick={() => toggleFAQ(index)}
-                  className="flex justify-between items-center w-[768px] smaller:w-[390px] cursor-pointer"
+                  className="flex justify-between items-center w-[768px] smaller:w-[383px] cursor-pointer"
                 >
                   <p className="text-[#E5C680] text-[20px] smaller:text-[13px] font-semibold">{faq.question}</p>
                   <Image
@@ -416,11 +416,11 @@ export default function LandingPage() {
                 </div>
 
                 {/* Linha separadora */}
-                <hr className="w-[768px] smaller:w-[390px] h-[1px] bg-[#E5C680] my-5" />
+                <hr className="w-[768px] smaller:w-[383px] h-[1px] bg-[#E5C680] my-5" />
 
                 {/* Resposta */}
                 {activeIndex === index && (
-                  <p className="text-[#FFFFFF] w-[768px] smaller:w-[390px] text-left ">{faq.answer}</p>
+                  <p className="text-[#FFFFFF] w-[768px] smaller:w-[383px] text-left ">{faq.answer}</p>
                 )}
               </div>
             ))}

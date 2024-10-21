@@ -73,19 +73,19 @@ export default function Login() {
         />
       </div>
 
-      <div className="smaller:block hidden mr-[70px] mt-[-780px] absolute text-center z-20">
+      <div className="smaller:block hidden mr-[40px] mt-[-780px] absolute text-center z-20">
         {/* Imagem "parabens" substituindo os textos */}
         <Image
           src={novo2}
           alt="Parabéns"
           width={202} // Ajuste a largura conforme necessário
-          height={20} // Ajuste a altura conforme necessário
+          height={66} // Ajuste a altura conforme necessário
           className="mx-auto mb-6"
         />
       </div>
 
    
-      <div className="smaller:block hidden mr-[70px] mt-[-300px] absolute text-center z-20">
+      <div className="smaller:block hidden mr-[75px] mt-[-450px] absolute text-center z-20">
         {/* Imagem "parabens" substituindo os textos */}
         <Image
           src={novo}
@@ -96,7 +96,7 @@ export default function Login() {
         />
       </div>
 
-      <div className="smaller:block hidden mr-6 mt-[230px] absolute text-center z-20">
+      <div className="smaller:block hidden mr-5 mt-[70px] absolute text-center z-20">
         {/* Imagem "parabens" substituindo os textos */}
         <Image
           src={raio2}
@@ -108,7 +108,7 @@ export default function Login() {
       </div>
 
 
-      <div className="absolute text-center z-20">
+      <div className="absolute text-center mb-[150px] ml-3 z-20">
         {/* Imagem "parabens" substituindo os textos */}
         <Image
           src={parabens}
