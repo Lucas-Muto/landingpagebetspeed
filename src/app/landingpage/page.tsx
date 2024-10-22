@@ -293,7 +293,7 @@ export default function LandingPage() {
             alt="Botão grande"
             width={441}
             height={60}
-            className="w-[1200px] h-[1200px]"
+            className="w-[1200px] h-[500px]"
           />
         </a>
       </div>
@@ -318,7 +318,7 @@ export default function LandingPage() {
 
       <div className="flex relative mt-[-200px] smaller:hidden justify-center items-center h-screen">
         <a
-          href="https://wa.me/5521991871253"
+          href="https://t.me/+OjzvJqfzVR8yNjZh"
           target="_blank"
           rel="noopener noreferrer"
           className="cursor-pointer"
@@ -328,7 +328,7 @@ export default function LandingPage() {
             alt="Botão grande"
             width={441}
             height={60}
-            className="w-[900px] h-[1200px]"
+            className="w-[900px] h-[500px]"
           />
         </a>
       </div>
