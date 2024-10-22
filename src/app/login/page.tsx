@@ -19,6 +19,7 @@ export default function Login() {
 
   const allowedUsers = [
     'mauricio mendes santos',
+    'admin',
     'henrique de souza barcelos',
     'mingpei wu',
     'louryval soares melo raposo',
