@@ -318,7 +318,7 @@ export default function LandingPage() {
 
       <div className="flex relative mt-[-200px] smaller:hidden justify-center items-center h-screen">
         <a
-          href="https://t.me/+OjzvJqfzVR8yNjZh"
+          href="https://wa.me/5521991871253"
           target="_blank"
           rel="noopener noreferrer"
           className="cursor-pointer"
