@@ -318,7 +318,7 @@ export default function LandingPage() {
 
       <div className="flex relative mt-[-200px] smaller:hidden justify-center items-center h-screen">
         <a
-          href="https://wa.me/5521991871253"
+          href="https://t.me/+OjzvJqfzVR8yNjZh"
           target="_blank"
           rel="noopener noreferrer"
           className="cursor-pointer"
@@ -337,7 +337,7 @@ export default function LandingPage() {
       {/* Imagem "botaozinho" visível apenas em telas de 550px ou menores */}
       <div className="hidden relative mt-[-110px] mb-[-50px] smaller:flex justify-center items-center h-screen">
         <a
-          href="https://wa.me/5521991871253"
+          href="https://t.me/+OjzvJqfzVR8yNjZh"
           target="_blank"
           rel="noopener noreferrer"
           className="cursor-pointer"
