@@ -17,23 +17,27 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "main-bg": "url('/background.jpg')"
+      },
       screens: {
         'below1367': '1366px', // Define um breakpoint personalizado para menos de 1367px
         'custom-sm': '532px',  // Definindo um novo breakpoint para 532px
-        'smaller': {'max': '550px'},
-        'note': '1366px' // Adiciona breakpoint para telas menores ou iguais a 430px
-        
+        'smaller': { 'max': '550px' },
+        'note': '1366px', // Adiciona breakpoint para telas menores ou iguais a 430px
+        'lg': '1100px'
       },
       colors: {
+        primary: "#E5C680",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
+        // primary: {
+        //   DEFAULT: "hsl(var(--primary))",
+        //   foreground: "hsl(var(--primary-foreground))",
+        // },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
