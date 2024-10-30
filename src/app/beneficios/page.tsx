@@ -59,7 +59,7 @@ export default function LandingPage() {
   return (
     <div className="w-full min-h-screen flex flex-col gap-32 lg:gap-44">
       {/* Main Section */}
-      <section className="w-full flex flex-col-reverse lg:flex-row items-center justify-center px-6 mt-24 lg:mt-36">
+      <section className="w-full flex flex-col-reverse lg:flex-row items-center justify-center px-6 mt-24 lg:mt-36 gap-14">
         <div className="lg:max-w-[400px] max-w-[370px] flex flex-col text-center lg:text-start lg:gap-4">
           <h1 className="text-white lg:text-4xl text-3xl font-bold mb-1 lg:mb-0">
             O <span className="text-primary">maior clube de vantagens</span> do
@@ -83,7 +83,7 @@ export default function LandingPage() {
         <img
           src="/card.png"
           alt="betspeed-card"
-          className="w-[300px] lg:w-[450px] mb-14 lg:mb-0"
+          className="w-[300px] lg:w-[450px]"
         />
       </section>
       {/* Experience Section */}
