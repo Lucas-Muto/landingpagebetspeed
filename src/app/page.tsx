@@ -2,14 +2,13 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 import React from "react";
-import { UserIcon } from "@heroicons/react/24/solid"; // Heroicons para o ícone de usuário
 import { Button, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
 import { allowedUsers } from "./utils/allowedUsers";
 
 export default function Login() {
   const [username, setUsername] = useState("");
+  const [error, setError] = useState(false);
   const router = useRouter();
 
   // Função para validar o nome de usuário
@@ -20,11 +19,12 @@ export default function Login() {
       allowedUsers.some((user) => user.toLowerCase() === username.toLowerCase())
     ) {
       localStorage.setItem("userValidated", "true");
+      setError(false);
       setTimeout(() => {
         router.push("/beneficios");
       }, 100);
     } else {
-      alert("Usuário não autorizado. Tente outro nome.");
+      setError(true);
     }
   };
 
@@ -39,11 +39,13 @@ export default function Login() {
             </h1>
             <p>Acesse para conhecer as vantagens BetSpeed Prime.</p>
           </div>
-          <form
-            className="flex items-center rounded-[10px] bg-white px-3 w-[460px] h-[64px]"
-            onSubmit={(e) => handleLogin(e)}
-          >
-            <InputGroup size="lg">
+          <form className={"flex flex-col"} onSubmit={(e) => handleLogin(e)}>
+            <InputGroup
+              size="lg"
+              className={`flex items-center rounded-[10px] bg-white px-3 w-[460px] h-[64px] ${
+                error ? "border-2 border-red-600" : ""
+              }`}
+            >
               <Input
                 pr="13rem"
                 height={"48px"}
@@ -56,21 +58,21 @@ export default function Login() {
               />
               <InputRightElement width="12rem">
                 <Button
-                  className="!bg-primary w-full"
+                  className="!bg-primary w-full mt-[14px] mr-2"
                   size="lg"
+                  _hover={{ transform: "scale(1.05)" }}
                   onClick={(e) => handleLogin(e)}
                 >
                   Acessar
                 </Button>
               </InputRightElement>
             </InputGroup>
+            <p className={`${error ? "block" : "hidden"} text-red-600`}>
+              Usuário não encontrado. Tente novamente{" "}
+            </p>
           </form>
         </div>
-        <img
-          src="/card.png"
-          alt="betspeed-card"
-          className="w-[500px] h-[590px]"
-        />
+        <img src="/card.png" alt="betspeed-card" className="w-[450px]" />
       </div>
       <div className="lg:hidden flex flex-col items-center text-white py-20 w-[330px]">
         <img src="/card.png" alt="betspeed-card" className="w-[100%]" />
@@ -88,16 +90,20 @@ export default function Login() {
           width={"100%"}
           type={"text"}
           placeholder="Usuário"
-          border={"none"}
+          border={error ? "2px solid red" : ""}
           focusBorderColor={"white"}
           bgColor={"white"}
           textColor={"black"}
-          mb={"20px"}
           onChange={(e) => setUsername(e.target.value)}
         />
+        <p className={`${error ? "block" : "hidden"} text-red-600`}>
+          Usuário não encontrado. Tente novamente{" "}
+        </p>
         <Button
           className="!bg-primary w-full"
+          mt={"20px"}
           size="lg"
+          _hover={{ transform: "scale(1.05)" }}
           onClick={(e) => handleLogin(e)}
         >
           Acessar

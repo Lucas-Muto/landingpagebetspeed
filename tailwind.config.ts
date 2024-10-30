@@ -22,6 +22,7 @@ const config = {
       },
       height: {
         "screen-minus-200": "calc(100vh - 200px)",
+        "screen-minus-125": "calc(100vh - 125px)",
       },
       screens: {
         below1367: "1366px", // Define um breakpoint personalizado para menos de 1367px

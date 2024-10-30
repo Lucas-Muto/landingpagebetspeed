@@ -3,6 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.slick-slide:first-child {
-  margin-left: -35px; /* Ajuste o valor conforme necessário */
+.slick-slide {
+  padding: 0 10px;
 }
