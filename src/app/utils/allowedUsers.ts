@@ -1,6 +1,6 @@
 export const allowedUsers = [
+  "speed admin",
   "adam martins dos santos",
-  "admin",
   "adriano jose fernandes de faria",
   "aislan reis bastos",
   "alan antonio de amorim neto",

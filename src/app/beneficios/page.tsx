@@ -57,7 +57,7 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="w-full min-h-screen flex flex-col gap-44">
+    <div className="w-full min-h-screen flex flex-col gap-32 lg:gap-44">
       {/* Main Section */}
       <section className="w-full flex flex-col-reverse lg:flex-row items-center justify-center px-6 mt-24 lg:mt-36">
         <div className="lg:max-w-[400px] max-w-[370px] flex flex-col text-center lg:text-start lg:gap-4">
@@ -180,7 +180,7 @@ export default function LandingPage() {
           </Link>
         </div>
       </section>
-      <section className="w-full mb-44 px-6">
+      <section className="w-full mb-32 lg:mb-44 px-6">
         {/* FAQ Section */}
         <div>
           <h2 className="text-[#E5C680]  text-center lg:text-4xl text-3xl font-bold uppercase tracking-wide">
