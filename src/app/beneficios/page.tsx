@@ -60,18 +60,18 @@ export default function LandingPage() {
     <div className="w-full min-h-screen flex flex-col gap-32 lg:gap-44">
       {/* Main Section */}
       <section className="w-full flex flex-col-reverse lg:flex-row items-center justify-center px-6 mt-24 lg:mt-36 gap-14">
-        <div className="lg:max-w-[400px] max-w-[370px] flex flex-col text-center lg:text-start lg:gap-4">
-          <h1 className="text-white lg:text-4xl text-3xl font-bold mb-1 lg:mb-0">
+        <div className="lg:max-w-[550px] max-w-[370px] flex flex-col text-center lg:text-start lg:gap-4">
+          <h1 className="text-white text-3xl lg:text-4xl font-bold mb-1 lg:mb-0">
             O <span className="text-primary">maior clube de vantagens</span> do
             mundo das apostas chegou para você
           </h1>
-          <p className="text-white">
+          <p className="text-white lg:text-lg">
             Receba cash-back mensal, tenha um assistente à sua disposição e viva
             experiências exclusivas que só um jogador Raio merece ter.
           </p>
           <div className="flex gap-3 lg:gap-6 flex-col lg:flex-row items-center mt-14">
             <Button
-              className="!bg-primary w-full lg:w-auto"
+              className="!bg-primary w-full lg:w-[300px]"
               _hover={{ transform: "scale(1.05)" }}
               onClick={scrollToExperience}
             >
@@ -89,14 +89,14 @@ export default function LandingPage() {
       {/* Experience Section */}
       <section className="flex flex-col justify-center items-center">
         <h1
-          className="text-3xl font-bold mb-8 lg:mb-48 text-white text-center px-6"
+          className="text-3xl lg:text-4xl font-bold mb-8 lg:mb-20 text-white text-center px-6"
           ref={experienceRef}
         >
           A sua experiência BetSpeed{" "}
           <span className="text-primary">potencializada</span>
         </h1>
         {/* Desktop */}
-        <div className="w-[1050px] lg:flex flex-wrap hidden">
+        <div className="w-[1176px] lg:flex flex-wrap hidden">
           {benefits.map((item: Benefit, index: number) => {
             return <BenefitsCard benefit={item} index={index} key={index} />;
           })}
@@ -114,18 +114,18 @@ export default function LandingPage() {
       </section>
       {/* Whisky Section */}
       <section className="w-full flex justify-center px-6">
-        <div className="grid grid-col-1 lg:grid-rows-4 lg:grid-flow-col max-w-[370px] lg:max-w-[900px] gap-14">
-          <div className="row-start-1 lg:row-span-2 lg:col-span-1 w-full lg:w-[350px] text-center lg:text-start">
-            <h1 className="text-3xl text-primary font-bold mb-3">
+        <div className="grid grid-col-1 lg:grid-rows-3 lg:grid-flow-col max-w-[370px] lg:max-w-[1176px] gap-14">
+          <div className="row-start-1 lg:row-span-2 lg:col-span-1 w-full text-center lg:text-start">
+            <h1 className="text-3xl lg:text-4xl text-primary font-bold mb-3">
               A melhor forma de começar sua jornada
             </h1>
-            <p className="text-white">
+            <p className="text-white lg:text-lg">
               Um presente de boas-vindas para você. A box é totalmente
               personalizada e vai te dar o gostinho de ser um jogador Raio.
             </p>
           </div>
-          <div className="row-start-3 lg:row-span-2 lg:col-span-1 w-full lg:w-[350px] text-white">
-            <p className="text-center lg:text-start mb-4 lg:mb-2 px-20 lg:px-0">
+          <div className="row-start-3 lg:row-span-2 lg:col-span-1 w-full text-white">
+            <p className="text-center lg:text-start mb-4 lg:mb-2 px-20 lg:px-0 lg:text-lg">
               Entre em contato conosco e resgate já o seu kit
             </p>
             <Link
@@ -150,12 +150,15 @@ export default function LandingPage() {
       </section>
       {/* Telegram Section */}
       <section className="flex flex-col w-full justify-center items-center gap-4 px-6">
-        <h3 className="text-white text-3xl font-bold text-center max-w-[370px] lg:max-w-full">
+        <h3 className="text-white text-3xl lg:text-4xl font-bold text-center max-w-[370px] lg:max-w-full">
           Tudo que você precisa saber,{" "}
           <span className="text-primary">na palma da sua mão</span>
         </h3>
         <div className="bg-primary lg:w-[820px] rounded-xl flex lg:flex-row flex-col max-w-[370px] lg:max-w-full items-center text-center lg:text-start justify-center px-7 lg:px-10 py-4">
-          <p style={{ lineHeight: "1.2rem" }} className="mb-4 lg:mb-0">
+          <p
+            style={{ lineHeight: "1.2rem" }}
+            className="mb-4 lg:mb-0 lg:text-lg"
+          >
             Informações em primeira mão de odds relâmpago, aviso de sorteios e
             torneios exclusivos e muito mais para você não perder nenhuma
             oportunidade. 
@@ -183,7 +186,7 @@ export default function LandingPage() {
       <section className="w-full mb-32 lg:mb-44 px-6">
         {/* FAQ Section */}
         <div>
-          <h2 className="text-[#E5C680]  text-center lg:text-4xl text-3xl font-bold uppercase tracking-wide">
+          <h2 className="text-[#E5C680]  text-center text-3xl lg:text-4xl font-bold uppercase tracking-wide">
             FAQ
           </h2>
 
@@ -195,7 +198,7 @@ export default function LandingPage() {
                   onClick={() => toggleFAQ(index)}
                   className="flex justify-between items-center md:w-[700px] w-[100%] cursor-pointer"
                 >
-                  <p className="text-[#E5C680] text-sm lg:text-md font-semibold">
+                  <p className="text-[#E5C680] text-sm lg:text-lg font-semibold">
                     {faq.question}
                   </p>
                   <Image
@@ -218,7 +221,7 @@ export default function LandingPage() {
 
                 {/* Resposta */}
                 {activeIndex === index && (
-                  <p className="text-[#FFFFFF] md:w-[700px] w-[100%] text-left text-sm lg:text-md">
+                  <p className="text-[#FFFFFF] md:w-[700px] w-[100%] text-left text-sm lg:text-lg">
                     {faq.answer}
                   </p>
                 )}

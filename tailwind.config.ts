@@ -29,7 +29,7 @@ const config = {
         "custom-sm": "532px", // Definindo um novo breakpoint para 532px
         smaller: { max: "550px" },
         note: "1366px", // Adiciona breakpoint para telas menores ou iguais a 430px
-        lg: "1100px",
+        lg: "1200px",
       },
       colors: {
         primary: "#E5C680",
