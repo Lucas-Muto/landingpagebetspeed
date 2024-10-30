@@ -8,7 +8,7 @@ export const benefits: Benefit[] = [
   {
     title: "Welcome Kit",
     description:
-      "Uma box exclusiva com uma Gold Label, R$500 para a sua banca, e um cartão black personalizado.",
+      "Uma box exclusiva com uma Gold Label, R$500 para a sua banca e um cartão black personalizado.",
     url: "/logos/gift.png",
   },
   {
@@ -18,7 +18,7 @@ export const benefits: Benefit[] = [
     url: "/logos/user.png",
   },
   {
-    title: "Cash Back",
+    title: "Cashback",
     description:
       "Deu red? Sem estresse! Todo dia 05, você recebe uma porcentagem sobre as suas movimentações na casa com o Cash Back.",
     url: "/logos/money.png",
@@ -26,7 +26,7 @@ export const benefits: Benefit[] = [
   {
     title: "Prêmios mensais",
     description:
-      "Você também concorre a Iphones, viagens e experiências únicas, sorteadas mensalmente.",
+      "Você também concorre a iPhones, viagens e experiências únicas, sorteadas mensalmente.",
     url: "/logos/trophy.png",
   },
   {

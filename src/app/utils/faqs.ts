@@ -7,7 +7,7 @@ export const faqs = [
   {
     question: "Quais são os principais benefícios de ser um membro?",
     answer:
-      "Os membros do BetSpeed Prime têm acesso a avisos de Super odds e odds reâmpago, Rakeback em apostas, Prêmios personalizados e experiências VIP, Atendimento exclusivo via WhatsApp, Acesso a um grupo anônimo com comunicação especial.",
+      "Os membros do BetSpeed Prime têm acesso a avisos de Super odds e odds relâmpago, rakeback em apostas, prêmios personalizados e experiências VIP, atendimento exclusivo via WhatsApp, acesso a um grupo anônimo com comunicação especial.",
   },
   {
     question: "Como posso me tornar um membro do BetSpeed Prime?",
