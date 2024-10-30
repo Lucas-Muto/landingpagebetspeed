@@ -3,10 +3,10 @@ import type { Config } from "tailwindcss";
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   theme: {
     container: {
@@ -17,23 +17,31 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "main-bg": "url('/background.jpg')",
+      },
+      height: {
+        "screen-minus-200": "calc(100vh - 200px)",
+        "screen-minus-125": "calc(100vh - 125px)",
+      },
       screens: {
-        'below1367': '1366px', // Define um breakpoint personalizado para menos de 1367px
-        'custom-sm': '532px',  // Definindo um novo breakpoint para 532px
-        'smaller': {'max': '550px'},
-        'note': '1366px' // Adiciona breakpoint para telas menores ou iguais a 430px
-        
+        below1367: "1366px", // Define um breakpoint personalizado para menos de 1367px
+        "custom-sm": "532px", // Definindo um novo breakpoint para 532px
+        smaller: { max: "550px" },
+        note: "1366px", // Adiciona breakpoint para telas menores ou iguais a 430px
+        lg: "1100px",
       },
       colors: {
+        primary: "#E5C680",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
+        // primary: {
+        //   DEFAULT: "hsl(var(--primary))",
+        //   foreground: "hsl(var(--primary-foreground))",
+        // },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",

@@ -1,20 +1,8 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
-import { NextUIProvider } from "@nextui-org/react";
-
-// Definição de fontes locais
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { Providers } from "./providers";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "BetSpeed Prime",
@@ -28,16 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <title>BetSpeed Prime</title>
-        <link rel="icon" href="/favicon.ico?v=2" /> {/* Adicionado ?v=2 para forçar atualização */}
-      </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <NextUIProvider>
-          <div style={{ minHeight: "100vh", backgroundColor: "#000000", color: "#FFFFFF" }}>
-            {children}
-          </div>
-        </NextUIProvider>
+      <body className="bg-main-bg w-full min-h-screen">
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
