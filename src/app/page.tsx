@@ -30,8 +30,8 @@ export default function Login() {
 
   return (
     <div className="flex h-full lg:h-screen-minus-200 font-poppins justify-center items-center">
-      <div className="hidden lg:flex items-center justify-center">
-        <div className="flex flex-col text-white w-[500px] h-[250px] justify-between">
+      <div className="hidden lg:flex items-center justify-center lg:gap-14">
+        <div className="flex flex-col text-white w-[550px] h-[250px] justify-between">
           <div>
             <h1 className="text-5xl font-bold mb-2">
               Parabéns, agora você é um{" "}
